@@ -1,27 +1,31 @@
-# slippery
+## **_Slippery_** 
+### Title is a work in progress
 
-## Bash Script in Progress for CentOS Flavored 'nix
+```
 
-### Just a standard bash script for the Amazon Linux AMI (as of 2018)
+# Bash Script in Progress for CentOS Flavored 'nix
 
-### She-bangs...Shebangs
-'#!/bin/bash'
+# Just a standard bash script for the Amazon Linux AMI (as of 2018)
 
-### updates current packages
-'yum update -y'
+# She-bangs...Shebangs
+#!/bin/bash
 
-### installs Apache 2.4, PHP 5.6 and Git (else it won't work!)
-'yum install httpd24 php56 git -y'
+# updates current packages
+yum update -y
 
-### starts the Apache webserver so you can reach your instance on port 80
-'service httpd start'
+# installs Apache 2.4, PHP 5.6 and Git (else it won't work!)
+yum install httpd24 php56 git -y
 
-### reminds the server that it needs to ensure Apache starts up each time
-'chkconfig httpd on'
+# starts the Apache webserver so you can reach your instance on port 80
+service httpd start
 
-### changes directory to the standard Apache index location
-'cd /var/www/html'
+# reminds the server that it needs to ensure Apache starts up each time
+chkconfig httpd on
 
-### makes a one line php file for testing purposes 
-'echo "<?php phpinfo();?>" > test.php'
+# changes directory to the standard Apache index location
+cd /var/www/html
 
+# makes a one line php file for testing purposes 
+echo "<?php phpinfo();?>" > test.php
+
+```
